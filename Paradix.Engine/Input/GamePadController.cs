@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 namespace Paradix
 {
 	public sealed class GamePadController : IUpdateable
-    {
+	{
 		// TODO : Add Threshold
 		// TODO : Add HasChanged, HasMoved or WasTouched
 		// TODO : Vibration Duration
@@ -15,23 +15,23 @@ namespace Paradix
 		public GamePadState CurrentState { get; private set; }
 		public GamePadState PreviousState { get; private set; }
 
-		public GamePadController(PlayerIndex player = PlayerIndex.One, GamePadDeadZone deadZone = GamePadDeadZone.None)
-        {
+		public GamePadController (PlayerIndex player = PlayerIndex.One, GamePadDeadZone deadZone = GamePadDeadZone.None)
+		{
 			Player = player;
 			DeadZone = deadZone;
-			CurrentState = GamePad.GetState(Player, DeadZone);
+			CurrentState = GamePad.GetState (Player, DeadZone);
 			PreviousState = CurrentState;
-        }
+		}
 
-        public bool IsConnected
-        {
-            get 
-			{ 
-				return CurrentState.IsConnected; 
+		public bool IsConnected 
+		{
+			get 
+			{
+				return CurrentState.IsConnected;
 			}
-        }
+		}
 
-		public GamePadCapabilities GetCapabilities()
+		public GamePadCapabilities GetCapabilities ()
 		{
 			return GamePad.GetCapabilities (Player);
 		}
@@ -41,7 +41,7 @@ namespace Paradix
 			return GamePad.SetVibration (Player, motors.X, motors.Y);
 		}
 
-		public bool SetVibration(float leftMotor, float rightMotor)
+		public bool SetVibration (float leftMotor, float rightMotor)
 		{
 			return GamePad.SetVibration (Player, leftMotor, rightMotor);
 		}
@@ -56,23 +56,23 @@ namespace Paradix
 			return CurrentState.IsButtonUp (button);
 		}
 
-        public bool IsButtonPressed(Buttons button)
-        {
-			return CurrentState.IsButtonDown(button) && PreviousState.IsButtonUp (button);
-        }
+		public bool IsButtonPressed (Buttons button)
+		{
+			return CurrentState.IsButtonDown (button) && PreviousState.IsButtonUp (button);
+		}
 
-        public bool IsButtonReleased(Buttons button)
-        {
+		public bool IsButtonReleased (Buttons button)
+		{
 			return PreviousState.IsButtonDown (button) && CurrentState.IsButtonUp (button);
-        }
+		}
 
-        public Vector2 LeftThumpstick
-        {
-            get 
-			{ 
-				return CurrentState.ThumbSticks.Left; 
+		public Vector2 LeftThumpstick 
+		{
+			get 
+			{
+				return CurrentState.ThumbSticks.Left;
 			}
-        }
+		}
 
 		public Vector2 RightThumpstick 
 		{
@@ -82,13 +82,13 @@ namespace Paradix
 			}
 		}
 
-        public Vector2 LeftThumpstickDelta
-        {
-            get 
-			{ 
-				return CurrentState.ThumbSticks.Left - PreviousState.ThumbSticks.Left; 
-			}	
-        }
+		public Vector2 LeftThumpstickDelta 
+		{
+			get 
+			{
+				return CurrentState.ThumbSticks.Left - PreviousState.ThumbSticks.Left;
+			}
+		}
 
 		public Vector2 RightThumpstickDelta 
 		{
@@ -98,22 +98,22 @@ namespace Paradix
 			}
 		}
 
-        public float LeftTriggerPressure
-        {
-            get 
-			{ 
-				return CurrentState.Triggers.Left; 
+		public float LeftTriggerPressure 
+		{
+			get 
+			{
+				return CurrentState.Triggers.Left;
 			}
-			
-        }
 
-        public float LeftTriggerPressureDelta
-        {
-            get 
-			{ 
-				return CurrentState.Triggers.Left - PreviousState.Triggers.Left; 
+		}
+
+		public float LeftTriggerPressureDelta 
+		{
+			get 
+			{
+				return CurrentState.Triggers.Left - PreviousState.Triggers.Left;
 			}
-        }
+		}
 
 		public float RightTriggerPressure 
 		{
@@ -121,7 +121,6 @@ namespace Paradix
 			{
 				return CurrentState.Triggers.Right;
 			}
-
 		}
 
 		public float RightTriggerPressureDelta 
@@ -132,10 +131,10 @@ namespace Paradix
 			}
 		}
 
-		public void Update(GameTime gameTime)
-        {
+		public void Update (GameTime gameTime)
+		{
 			PreviousState = CurrentState;
 			CurrentState = GamePad.GetState (Player, DeadZone);
-        }
-    }
+		}
+	}
 }

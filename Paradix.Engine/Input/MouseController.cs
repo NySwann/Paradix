@@ -4,19 +4,19 @@ using Microsoft.Xna.Framework.Input;
 namespace Paradix
 {
 	public sealed class MouseController : IUpdateable
-    {
+	{
 		// TODO : Add sensivity
 
 		public MouseState CurrentState { get; private set; }
 		public MouseState PreviousState { get; private set; }
 
-        public Point Position
-        {
-            get
-            {
-                return CurrentState.Position;
-            }
-        }
+		public Point Position 
+		{
+			get 
+			{
+				return CurrentState.Position;
+			}
+		}
 
 		public Point PositionDelta 
 		{
@@ -26,17 +26,17 @@ namespace Paradix
 			}
 		}
 
-		public bool IsMoving
+		public bool IsMoving 
 		{
-			get
+			get 
 			{
 				return CurrentState.Position != PreviousState.Position;
 			}
 		}
 
-		public int Wheel
+		public int Wheel 
 		{
-			get
+			get 
 			{
 				return CurrentState.ScrollWheelValue;
 			}
@@ -50,9 +50,9 @@ namespace Paradix
 			}
 		}
 
-		public bool IsScrolling
+		public bool IsScrolling 
 		{
-			get
+			get 
 			{
 				return CurrentState.ScrollWheelValue != PreviousState.ScrollWheelValue;
 			}
@@ -74,27 +74,27 @@ namespace Paradix
 			}
 		}
 
-		public MouseController()
+		public MouseController ()
 		{
 			CurrentState = Mouse.GetState ();
 			PreviousState = CurrentState;
 		}
 
-		public bool IsButtonDown(MouseButton button)
+		public bool IsButtonDown (MouseButton button)
 		{
-			switch (button)
+			switch (button) 
 			{
-				case MouseButton.Left:
+			case MouseButton.Left:
 				return CurrentState.LeftButton == ButtonState.Pressed;
-				case MouseButton.Middle:
+			case MouseButton.Middle:
 				return CurrentState.MiddleButton == ButtonState.Pressed;
-				case MouseButton.Right:
+			case MouseButton.Right:
 				return CurrentState.RightButton == ButtonState.Pressed;
-				case MouseButton.Forward:
+			case MouseButton.Forward:
 				return CurrentState.XButton1 == ButtonState.Pressed;
-				case MouseButton.Back:
+			case MouseButton.Back:
 				return CurrentState.XButton2 == ButtonState.Pressed;
-				default:
+			default:
 				throw Contract.Unreachable;
 			}
 		}
@@ -103,17 +103,17 @@ namespace Paradix
 		{
 			switch (button) 
 			{
-				case MouseButton.Left:
+			case MouseButton.Left:
 				return CurrentState.LeftButton == ButtonState.Released;
-				case MouseButton.Middle:
+			case MouseButton.Middle:
 				return CurrentState.MiddleButton == ButtonState.Released;
-				case MouseButton.Right:
+			case MouseButton.Right:
 				return CurrentState.RightButton == ButtonState.Released;
-				case MouseButton.Forward:
+			case MouseButton.Forward:
 				return CurrentState.XButton1 == ButtonState.Released;
-				case MouseButton.Back:
+			case MouseButton.Back:
 				return CurrentState.XButton2 == ButtonState.Released;
-				default:
+			default:
 				throw Contract.Unreachable;
 			}
 		}
@@ -156,10 +156,10 @@ namespace Paradix
 			}
 		}
 
-		public void Update(GameTime gameTime)
-        {
-            PreviousState = CurrentState;
-            CurrentState = Mouse.GetState();
-        }
-    }
+		public void Update (GameTime gameTime)
+		{
+			PreviousState = CurrentState;
+			CurrentState = Mouse.GetState ();
+		}
+	}
 }

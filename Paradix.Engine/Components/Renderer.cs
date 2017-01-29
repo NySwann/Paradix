@@ -24,8 +24,8 @@ namespace Paradix
 
 			var transform = AttachedGameObject.GetComponent<Transform> ();
 
-			spriteDrawer.Draw (Sprite.Texture, transform.AbsolutePosition, Sprite.SourceRectangle, Color.Lerp (ColorMask, Sprite.Color, 0.5f), 
-			                   transform.AbsoluteRotation, Sprite.Origin, transform.AbsoluteScale * PixelsPerUnit * Sprite.PixelsPerUnit, Sprite.Effects, LayerDepth);
+			spriteDrawer.Draw (Sprite.Texture, transform.AbsolutePosition, Sprite.SourceRectangle, Color.Lerp (ColorMask, Sprite.Color, 0.5f),
+							   transform.AbsoluteRotation, Sprite.Origin, transform.AbsoluteScale * PixelsPerUnit * Sprite.PixelsPerUnit, Sprite.Effects, LayerDepth);
 		}
 	}
 }

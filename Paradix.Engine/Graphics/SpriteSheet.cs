@@ -7,7 +7,7 @@ namespace Paradix
 {
 	public class SpriteSheet
 	{
-		public Texture2D Sheet {get; private set; } = null;
+		public Texture2D Sheet { get; private set; } = null;
 		public List<Sprite> Frames { get; private set; } = null;
 
 		public int LineNumber { get; private set; } = 0;
@@ -16,7 +16,7 @@ namespace Paradix
 
 		public int FrameWidth 
 		{
-			get
+			get 
 			{
 				return Sheet.Width / ColumnNumber;
 			}
@@ -24,13 +24,13 @@ namespace Paradix
 
 		public int FrameHeight 
 		{
-			get
+			get 
 			{
 				return Sheet.Height / LineNumber;
 			}
 		}
 
-		public Sprite this[int frameIndex]
+		public Sprite this [int frameIndex] 
 		{
 			get 
 			{
@@ -57,7 +57,7 @@ namespace Paradix
 			GenerateFrames ();
 		}
 
-		private void GenerateFrames()
+		private void GenerateFrames ()
 		{
 			Frames = new List<Sprite> ();
 
@@ -65,7 +65,7 @@ namespace Paradix
 			{
 				var sprite = new Sprite (Sheet);
 
-				sprite.SourceRectangle =  new Rectangle ((frameIndex % ColumnNumber) * FrameWidth, 
+				sprite.SourceRectangle = new Rectangle ((frameIndex % ColumnNumber) * FrameWidth,
 					(frameIndex / ColumnNumber) * FrameHeight, FrameWidth, FrameHeight);
 
 				Frames.Add (sprite);
