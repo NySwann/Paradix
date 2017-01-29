@@ -40,6 +40,22 @@ namespace Paradix
 				throw new ArgumentException (paramName + " collection must not be empty");
 		}
 
+		public static void RequiresPositive (int value, string paramName)
+		{
+			RequiresNotEmpty (paramName, "paramName");
+
+			if (value <= 0)
+				throw new ArgumentNullException (paramName + " must be positive");
+		}
+
+		public static void RequiresPositiveOrNull (int value, string paramName)
+		{
+			RequiresNotEmpty (paramName, "paramName");
+
+			if (value < 0)
+				throw new ArgumentNullException (paramName + " must be positive or null");
+		}
+
 		public static Exception Unreachable 
 		{
 			get 

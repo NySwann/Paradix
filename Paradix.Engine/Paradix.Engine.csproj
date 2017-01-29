@@ -35,6 +35,9 @@
     <Compile Include="Behaviors\IDrawable.cs" />
     <Compile Include="Behaviors\IUpdateable.cs" />
     <Compile Include="Components\Transform.cs" />
+    <Compile Include="Components\Renderer.cs" />
+    <Compile Include="Graphics\Sprite.cs" />
+    <Compile Include="Graphics\SpriteSheet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -46,6 +49,7 @@
     <Folder Include="Assertions\" />
     <Folder Include="Behaviors\" />
     <Folder Include="Components\" />
+    <Folder Include="Graphics\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
