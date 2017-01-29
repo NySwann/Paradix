@@ -1,5 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Paradix.Engine/Graphics/SpriteSheet.cs">
+    <Files>
+      <File FileName="Paradix.Engine/Input/GamePadController.cs" Line="10" Column="31" />
+      <File FileName="Paradix.Engine/Input/KeyboardController.cs" Line="6" Column="28" />
+      <File FileName="Paradix.Engine/Input/MouseButton.cs" Line="1" Column="1" />
+      <File FileName="Paradix.Engine/Input/MouseController.cs" Line="17" Column="46" />
+      <File FileName="Paradix.Engine/ParadixGame.cs" Line="30" Column="2" />
+      <File FileName="Paradix.Engine/Managers/InputManager.cs" Line="8" Column="71" />
+      <File FileName="Paradix.Engine/Managers/GraphicsManager.cs" Line="18" Column="41" />
+      <File FileName="Paradix.Engine/System/Component.cs" Line="28" Column="1" />
+      <File FileName="Paradix.Engine/Components/Renderer.cs" Line="17" Column="4" />
+      <File FileName="Paradix.Engine/Graphics/Sprite.cs" Line="27" Column="1" />
+      <File FileName="Paradix.Engine/Graphics/SpriteSheet.cs" Line="73" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

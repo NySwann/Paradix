@@ -38,6 +38,13 @@
     <Compile Include="Components\Renderer.cs" />
     <Compile Include="Graphics\Sprite.cs" />
     <Compile Include="Graphics\SpriteSheet.cs" />
+    <Compile Include="Input\GamePadController.cs" />
+    <Compile Include="Input\KeyboardController.cs" />
+    <Compile Include="Input\MouseButton.cs" />
+    <Compile Include="Input\MouseController.cs" />
+    <Compile Include="ParadixGame.cs" />
+    <Compile Include="Managers\InputManager.cs" />
+    <Compile Include="Managers\GraphicsManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -50,6 +57,9 @@
     <Folder Include="Behaviors\" />
     <Folder Include="Components\" />
     <Folder Include="Graphics\" />
+    <Folder Include="Input\" />
+    <Folder Include="Managers\" />
+    <Folder Include="Content\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
