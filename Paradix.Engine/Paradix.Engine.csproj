@@ -30,6 +30,10 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Assertions\Contract.cs" />
+    <Compile Include="System\Component.cs" />
+    <Compile Include="System\Entity.cs" />
+    <Compile Include="Behaviors\IDrawable.cs" />
+    <Compile Include="Behaviors\IUpdateable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

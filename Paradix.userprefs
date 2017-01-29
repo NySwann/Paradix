@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Paradix.Engine/Assertions/Contract.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Paradix.Engine/System/Entity.cs">
     <Files>
       <File FileName="Paradix.Engine/Properties/AssemblyInfo.cs" Line="12" Column="38" />
-      <File FileName="Paradix.Engine/Assertions/Contract.cs" Line="10" Column="4" />
+      <File FileName="Paradix.Engine/Assertions/Contract.cs" Line="33" Column="3" />
+      <File FileName="Paradix.Engine/System/Component.cs" Line="13" Column="16" />
+      <File FileName="Paradix.Engine/System/Entity.cs" Line="4" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

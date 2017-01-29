@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Paradix
 {
@@ -28,6 +30,15 @@ namespace Paradix
             if (String.IsNullOrEmpty(str))
                 throw new ArgumentException(paramName + " string must not be empty");
         }
+
+		public static void RequiresNotEmpty<T> (IEnumerable<T> collection, string paramName)
+		{
+			RequiresNotEmpty (paramName, "paramName");
+			RequiresNotNull (collection, "collection");
+
+			if (collection.Count () == 0)
+				throw new ArgumentException (paramName + " collection must not be empty");
+		}
 
         public static Exception Unreachable
         {
