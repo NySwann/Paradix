@@ -45,6 +45,7 @@
     <Compile Include="ParadixGame.cs" />
     <Compile Include="Managers\InputManager.cs" />
     <Compile Include="Managers\GraphicsManager.cs" />
+    <Compile Include="Components\RigidBody.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
