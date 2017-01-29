@@ -78,6 +78,21 @@ namespace Paradix
 			return (Components.Find (component => component is T) != null);
 		}
 
+		public bool HasComponentWithName<T> (string name) where T : Component
+		{
+			return (Components.Find (component => component.Name == name && component is T) != null);
+		}
+
+		public bool HasComponentWithTag<T> (string tag) where T : Component
+		{
+			return (Components.Find (component => component.Tag == tag && component is T) != null);
+		}
+
+		public bool HasRequiredComponent(Predicate<Component> match)
+		{
+			return (Components.Find (match) != null);
+		}
+
 		public T GetComponent<T> () where T : Component
 		{
 			return ((T)Components.Find (component => component is T));
@@ -116,6 +131,11 @@ namespace Paradix
 				Components.Remove (toRemove);
 		}
 
+		public void RemoveComponents (Predicate<Component> match)
+		{
+			Components.RemoveAll (match);
+		}
+
 		public void RemoveComponentByName<T> (string name) where T : Component
 		{
 			var toRemove = (Components.Find (component => component.Name == name && component is T));
@@ -132,11 +152,6 @@ namespace Paradix
 				Components.Remove (toRemove);
 		}
 
-		public void RemoveComponents (Predicate<Component> match)
-		{
-			Components.RemoveAll (match);
-		}
-
 		public void ClearComponents ()
 		{
 			Components.Clear ();
@@ -148,6 +163,18 @@ namespace Paradix
 
 			foreach (var component in Components)
 				component.Initialize ();
+		}
+
+		protected override void Dispose (bool disposing)
+		{
+			if (!IsDisposed && disposing) 
+			{
+				IsActive = false;
+				Components.Clear ();
+				Components = null;
+			}
+
+			base.Dispose (disposing);
 		}
 	}
 }

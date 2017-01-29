@@ -1,14 +1,5 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Paradix.Engine/System/Component.cs">
-    <Files>
-      <File FileName="Paradix.Engine/Properties/AssemblyInfo.cs" Line="12" Column="38" />
-      <File FileName="Paradix.Engine/Assertions/Contract.cs" Line="21" Column="22" />
-      <File FileName="Paradix.Engine/System/Component.cs" Line="11" Column="44" />
-      <File FileName="Paradix.Engine/System/Entity.cs" Line="1" Column="14" />
-      <File FileName="Paradix.Engine/Behaviors/IDrawable.cs" Line="1" Column="1" />
-      <File FileName="Paradix.Engine/Behaviors/IUpdateable.cs" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -34,6 +34,7 @@
     <Compile Include="System\Entity.cs" />
     <Compile Include="Behaviors\IDrawable.cs" />
     <Compile Include="Behaviors\IUpdateable.cs" />
+    <Compile Include="Components\Transform.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
