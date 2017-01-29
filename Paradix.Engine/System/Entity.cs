@@ -16,12 +16,12 @@ namespace Paradix
 			Components = new List<Component> ();
 		}
 
-		public void Enable()
+		public void Enable ()
 		{
 			IsActive = true;
 		}
 
-		public void Disable()
+		public void Disable ()
 		{
 			IsActive = false;
 		}
@@ -30,7 +30,8 @@ namespace Paradix
 		{
 			if (IsActive) 
 			{
-				foreach (var component in Components) {
+				foreach (var component in Components) 
+				{
 					if (component is IUpdateable)
 						((IUpdateable)component).Update (gameTime);
 				}
@@ -41,7 +42,8 @@ namespace Paradix
 		{
 			if (IsActive) 
 			{
-				foreach (var component in Components) {
+				foreach (var component in Components) 
+				{
 					if (component is IDrawable)
 						((IDrawable)component).Draw (spriteDrawer, gameTime);
 				}
@@ -51,7 +53,6 @@ namespace Paradix
 		public void AddComponent (Component component)
 		{
 			Contract.RequiresNotNull (component, "component must not be null");
-
 			Contract.Requires (component.AttachedGameObject == null, "componement must not have multiple parents");
 
 			component.AttachedGameObject = this;
@@ -120,13 +121,15 @@ namespace Paradix
 			var toRemove = (Components.Find (component => component.Name == name && component is T));
 
 			if (toRemove != null)
-			Components.Remove (toRemove);
+				Components.Remove (toRemove);
 		}
 
 		public void RemoveComponentByTag<T> (string tag) where T : Component
 		{
 			var toRemove = (Components.Find (component => component.Tag == tag && component is T));
-			Components.Remove (toRemove);
+
+			if (toRemove != null)
+				Components.Remove (toRemove);
 		}
 
 		public void RemoveComponents (Predicate<Component> match)
