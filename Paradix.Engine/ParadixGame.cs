@@ -24,7 +24,19 @@ namespace Paradix
 		{
 			base.Update (gameTime);
 
-			Inputs.Update (gameTime);
+			Inputs.Flush (gameTime);
+		}
+
+		protected override void Dispose (bool disposing)
+		{
+			if (disposing) 
+			{
+				Graphics.Dispose ();
+				Graphics = null;
+				Inputs = null;
+			}
+
+			base.Dispose (disposing);
 		}
 	}
 }

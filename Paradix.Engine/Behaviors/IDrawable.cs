@@ -5,7 +5,7 @@ namespace Paradix
 {
 	public interface IDrawable
 	{
-		void Draw (SpriteBatch spriteBach, GameTime gameTime);
+		void Draw (GameTime gameTime, GraphicsManager graphics);
 	}
 }
 

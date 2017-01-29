@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Paradix
 {
-	public sealed class GamePadController : IUpdateable
+	public sealed class GamePadController : IController
 	{
 		// TODO : Add Threshold
 		// TODO : Add HasChanged, HasMoved or WasTouched
@@ -131,7 +131,7 @@ namespace Paradix
 			}
 		}
 
-		public void Update (GameTime gameTime)
+		public void Flush (GameTime gameTime)
 		{
 			PreviousState = CurrentState;
 			CurrentState = GamePad.GetState (Player, DeadZone);

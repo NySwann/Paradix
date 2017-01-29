@@ -26,26 +26,26 @@ namespace Paradix
 			IsActive = false;
 		}
 
-		public virtual void Update (GameTime gameTime)
+		public virtual void Update (GameTime gameTime, InputManager input)
 		{
 			if (IsActive) 
 			{
 				foreach (var component in Components) 
 				{
 					if (component is IUpdateable)
-						((IUpdateable)component).Update (gameTime);
+						((IUpdateable)component).Update (gameTime, input);
 				}
 			}
 		}
 
-		public virtual void Draw (SpriteBatch spriteDrawer, GameTime gameTime)
+		public virtual void Draw (GameTime gameTime, GraphicsManager graphics)
 		{
 			if (IsActive) 
 			{
 				foreach (var component in Components) 
 				{
 					if (component is IDrawable)
-						((IDrawable)component).Draw (spriteDrawer, gameTime);
+						((IDrawable)component).Draw (gameTime, graphics);
 				}
 			}
 		}

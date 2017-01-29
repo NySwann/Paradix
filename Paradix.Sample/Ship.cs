@@ -34,37 +34,26 @@ namespace Paradix.Sample
 			GetComponent<Renderer> ().LayerDepth = 0.9f;
 		}
 
-		public override void Update (GameTime gameTime)
+		public override void Update (GameTime gameTime, InputManager input)
 		{
-			KeyboardState keyboard = Keyboard.GetState();
-			JoystickState joystick = Joystick.GetState(0);
+			base.Update (gameTime, input);
 
 			var velocity = new Vector2();
 
-			if (joystick.IsConnected) 
-			{
-				if (joystick.Axes [0] < -0.05f || joystick.Axes [0] > 0.05f)
-					velocity.X = joystick.Axes [0];
-				if (joystick.Axes [1] < -0.05f || joystick.Axes [1] > 0.05f)
-					velocity.Y = joystick.Axes [1];
-			}
-
-			if (keyboard.IsKeyDown(Keys.Up))
+			if (input.Keyboards [0].IsKeyDown(Keys.Up))
 				velocity.Y = -1f;
-			if (keyboard.IsKeyDown (Keys.Down))
+			if (input.Keyboards [0].IsKeyDown (Keys.Down))
 				velocity.Y = 1f;
-			if (keyboard.IsKeyDown (Keys.Right))
+			if (input.Keyboards [0].IsKeyDown (Keys.Right))
 				velocity.X = 1f;
-			if (keyboard.IsKeyDown (Keys.Left))
+			if (input.Keyboards [0].IsKeyDown (Keys.Left))
 				velocity.X = -1f;
-			if (keyboard.IsKeyDown (Keys.A))
+			if (input.Keyboards [0].IsKeyDown (Keys.A))
 				GetComponent<Transform> ().RelativeRotation += 0.01f;
-			if (keyboard.IsKeyDown (Keys.E))
+			if (input.Keyboards [0].IsKeyDown (Keys.E))
 				GetComponent<Transform> ().RelativeRotation -= 0.01f;
 
 			GetComponent<RigidBody> ().AddVelocity (velocity);
-
-			base.Update (gameTime);
 		}
 	}
 }

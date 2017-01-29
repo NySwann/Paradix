@@ -4,6 +4,6 @@ namespace Paradix
 {
 	public interface IUpdateable
 	{
-		void Update (GameTime gameTime);
+		void Update (GameTime gameTime, InputManager input);
 	}
 }

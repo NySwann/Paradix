@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Paradix
 {
-	public sealed class MouseController : IUpdateable
+	public sealed class MouseController : IController
 	{
 		// TODO : Add sensivity
 
@@ -156,7 +156,7 @@ namespace Paradix
 			}
 		}
 
-		public void Update (GameTime gameTime)
+		public void Flush (GameTime gameTime)
 		{
 			PreviousState = CurrentState;
 			CurrentState = Mouse.GetState ();

@@ -21,7 +21,7 @@ namespace Paradix
 		{
 		}
 
-		public void Update (GameTime gameTime)
+		public void Update (GameTime gameTime, InputManager input)
 		{
 			if (Velocity.X > MaxVelocity.X)
 				Velocity = new Vector2(MaxVelocity.X, Velocity.Y);

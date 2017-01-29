@@ -16,7 +16,7 @@ namespace Paradix
 		{
 		}
 
-		public void Draw (SpriteBatch spriteDrawer, GameTime gameTime)
+		public void Draw (GameTime gameTime, GraphicsManager graphics)
 		{
 			Contract.RequiresNotNull (Sprite, "The Sprite must not be null");
 			Contract.Requires (IsAttached, "This Renderer component must be attached to an Entity");
@@ -24,7 +24,7 @@ namespace Paradix
 
 			var transform = AttachedGameObject.GetComponent<Transform> ();
 
-			spriteDrawer.Draw (Sprite.Texture, transform.AbsolutePosition, Sprite.SourceRectangle, Color.Lerp (ColorMask, Sprite.Color, 0.5f),
+			graphics.Batch.Draw (Sprite.Texture, transform.AbsolutePosition, Sprite.SourceRectangle, Color.Lerp (ColorMask, Sprite.Color, 0.5f),
 							   transform.AbsoluteRotation, Sprite.Origin, transform.AbsoluteScale * PixelsPerUnit * Sprite.PixelsPerUnit, Sprite.Effects, LayerDepth);
 		}
 	}

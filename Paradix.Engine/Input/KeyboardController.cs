@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Paradix
 {
-	public sealed class KeyboardController : IUpdateable
+	public sealed class KeyboardController : IController
 	{
 		// TODO : List of keys UP / DOWN / PRESSED / RELEASED
 
@@ -38,7 +38,7 @@ namespace Paradix
 			return PreviousState.IsKeyDown (key) && CurrentState.IsKeyUp (key);
 		}
 
-		public void Update (GameTime gameTime)
+		public void Flush (GameTime gameTime)
 		{
 			PreviousState = CurrentState;
 			CurrentState = Keyboard.GetState (Player);

@@ -2,7 +2,7 @@
 
 namespace Paradix
 {
-	public sealed class InputManager : IUpdateable
+	public sealed class InputManager : IController
 	{
 		public GamePadController [] GamePads { get; private set; } = null;
 		public KeyboardController [] Keyboards { get; private set; } = null;
@@ -25,15 +25,15 @@ namespace Paradix
 			Mouse = new MouseController ();
 		}
 
-		public void Update (GameTime gameTime)
+		public void Flush (GameTime gameTime)
 		{
 			foreach (var gamePad in GamePads)
-				gamePad.Update (gameTime);
+				gamePad.Flush (gameTime);
 			
 			foreach (var keyboard in Keyboards)
-				keyboard.Update (gameTime);
+				keyboard.Flush (gameTime);
 
-			Mouse.Update (gameTime);
+			Mouse.Flush (gameTime);
 		}
 	}
 

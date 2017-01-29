@@ -39,7 +39,7 @@ namespace Paradix.Sample
 		{
 			base.Update (gameTime);
 
-			PlayerShip.Update (gameTime);
+			PlayerShip.Update (gameTime, Inputs);
 		}
 
 		protected override void Draw (GameTime gameTime)
@@ -50,7 +50,7 @@ namespace Paradix.Sample
 
 			Graphics.Batch.Begin (SpriteSortMode.FrontToBack, BlendState.AlphaBlend);
 
-			PlayerShip.Draw (Graphics.Batch, gameTime);
+			PlayerShip.Draw (gameTime, Graphics);
 
 			Graphics.Batch.End();
 		}
