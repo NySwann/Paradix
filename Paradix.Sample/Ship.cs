@@ -33,7 +33,6 @@ namespace Paradix.Sample
 			base.Load (content);
 
 			GetComponent<Renderer> ().Sprite = new Sprite(content.Load<Texture2D> (ShipTextureFile));
-			GetComponent<Renderer> ().PixelsPerUnit = 1f;
 			GetComponent<Renderer> ().LayerDepth = 0.9f;
 		}
 
@@ -51,6 +50,7 @@ namespace Paradix.Sample
 				velocity.X = 1f;
 			if (input.Keyboards [0].IsKeyDown (Keys.Left))
 				velocity.X = -1f;
+
 			if (input.Keyboards [0].IsKeyDown (Keys.A))
 				GetComponent<Transform> ().RelativeRotation += 0.01f;
 			if (input.Keyboards [0].IsKeyDown (Keys.E))

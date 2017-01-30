@@ -1,13 +1,20 @@
 ﻿<Properties StartupConfiguration="{BFB66FFB-1935-48AF-8A60-CAC1EF792220}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Paradix.Engine/Components/Transform.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Paradix.Engine/Farseer/Common/Path.cs">
     <Files>
-      <File FileName="Paradix.Engine/Components/Transform.cs" Line="13" Column="5" />
-      <File FileName="Paradix.Engine/System/Component.cs" Line="13" Column="4" />
-      <File FileName="Paradix.Engine/System/Entity.cs" Line="75" Column="4" />
-      <File FileName="Paradix.Sample/Ship.cs" Line="1" Column="1" />
-      <File FileName="Paradix.Sample/Shooter.cs" Line="1" Column="1" />
-      <File FileName="Paradix.Sample/Gun.cs" Line="17" Column="70" />
-      <File FileName="Paradix.Sample/Program.cs" Line="1" Column="1" />
+      <File FileName="Paradix.Engine/Components/Transform.cs" Line="143" Column="26" />
+      <File FileName="Paradix.Engine/Properties/AssemblyInfo.cs" Line="4" Column="12" />
+      <File FileName="Paradix.Engine/Components/Renderer.cs" Line="26" Column="19" />
+      <File FileName="Paradix.Engine/Farseer/Common/Math.cs" Line="194" Column="3" />
+      <File FileName="Paradix.Engine/Farseer/Common/HashSet.cs" Line="1" Column="1" />
+      <File FileName="Paradix.Engine/Farseer/Common/PathManager.cs" Line="1" Column="1" />
+      <File FileName="Paradix.Engine/Farseer/Content/BodyContainer.cs" Line="1" Column="1" />
+      <File FileName="Paradix.Engine/Input/KeyboardController.cs" Line="41" Column="14" />
+      <File FileName="Paradix.Engine/Farseer/Collision/Shapes/ChainShape.cs" Line="120" Column="30" />
+      <File FileName="Paradix.Engine/Farseer/Common/Decomposition/Triangulate.cs" Line="97" Column="29" />
+      <File FileName="Paradix.Engine/Farseer/Settings.cs" Line="10" Column="42" />
+      <File FileName="Paradix.Engine/Farseer/Common/FixedArray.cs" Line="1" Column="1" />
+      <File FileName="Paradix.Engine/Farseer/Common/LineTools.cs" Line="1" Column="1" />
+      <File FileName="Paradix.Engine/Farseer/Common/Path.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

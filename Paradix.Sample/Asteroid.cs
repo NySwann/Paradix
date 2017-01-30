@@ -20,7 +20,6 @@ namespace Paradix.Sample
 		public override void Load(ContentManager content)
 		{
 			GetComponent<Renderer> ().Sprite = new Sprite(content.Load<Texture2D> (ShipTextureFile));
-			GetComponent<Renderer> ().PixelsPerUnit = 1f;
 			GetComponent<Renderer> ().LayerDepth = 0.1f;
 		}
 	}

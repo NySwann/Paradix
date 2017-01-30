@@ -2,7 +2,7 @@
 
 namespace Paradix
 {
-	public class RigidBody : Component, IUpdateable
+	public sealed class RigidBody : Component, IUpdateable
 	{
 		public Vector2 Velocity { get; private set; } = Vector2.Zero;
 		public Vector2 Acceleration { get; set; } = Vector2.One;
