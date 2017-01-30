@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace Paradix
 {
@@ -20,9 +19,9 @@ namespace Paradix
 		{
 			Contract.RequiresNotNull (Sprite, "The Sprite must not be null");
 			Contract.Requires (IsAttached, "This Renderer component must be attached to an Entity");
-			Contract.Requires (AttachedGameObject.HasComponent<Transform> (), "The Transform component is required for the Renderer component");
+			Contract.Requires (AttachedEntity.HasComponent<Transform> (), "The Transform component is required for the Renderer component");
 
-			var transform = AttachedGameObject.GetComponent<Transform> ();
+			var transform = AttachedEntity.GetComponent<Transform> ();
 
 			graphics.Batch.Draw (Sprite.Texture, transform.AbsolutePosition, Sprite.SourceRectangle, Color.Lerp (ColorMask, Sprite.Color, 0.5f),
 							   transform.AbsoluteRotation, Sprite.Origin, transform.AbsoluteScale * PixelsPerUnit * Sprite.PixelsPerUnit, Sprite.Effects, LayerDepth);

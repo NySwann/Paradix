@@ -58,9 +58,9 @@ namespace Paradix
 
 		public void Move (Vector2 relative)
 		{
-			Contract.Requires (AttachedGameObject.HasComponent<Transform> (), "The Transform component is required for the Rigidbody component");
+			Contract.Requires (AttachedEntity.HasComponent<Transform> (), "The Transform component is required for the Rigidbody component");
 
-			AttachedGameObject.GetComponent<Transform> ().RelativePosition += relative;
+			AttachedEntity.GetComponent<Transform> ().RelativePosition += relative;
 		}
 	}
 }

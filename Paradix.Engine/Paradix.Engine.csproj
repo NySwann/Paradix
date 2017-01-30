@@ -47,6 +47,8 @@
     <Compile Include="Managers\GraphicsManager.cs" />
     <Compile Include="Components\RigidBody.cs" />
     <Compile Include="Input\IController.cs" />
+    <Compile Include="Behaviors\IContent.cs" />
+    <Compile Include="Utils\Vector2Extensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -62,6 +64,7 @@
     <Folder Include="Input\" />
     <Folder Include="Managers\" />
     <Folder Include="Content\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

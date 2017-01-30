@@ -6,14 +6,14 @@ namespace Paradix
 	{
 		public string Name { get; private set; } = null;
 		public string Tag { get; private set; } = null;
-		public Entity AttachedGameObject { get; set; } = null;
+		public Entity AttachedEntity { get; set; } = null;
 		public bool IsDisposed {get; private set;} = false;
 
 		public bool IsAttached
 		{
 			get
 			{
-				return AttachedGameObject != null;
+				return AttachedEntity != null;
 			}
 		}
 
@@ -46,7 +46,7 @@ namespace Paradix
 			{
 				Name = null;
 				Tag = null;
-				AttachedGameObject = null;
+				AttachedEntity = null;
 			}
 
 			IsDisposed = true;

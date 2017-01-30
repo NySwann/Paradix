@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Content;
 
 namespace Paradix
 {
-	public class Entity : Component, IUpdateable, IDrawable
+	public class Entity : Component, IUpdateable, IDrawable, IContent
 	{
 		public bool IsActive { get; set; } = true;
 		public List<Component> Components { get; private set; } = null;
@@ -26,36 +26,12 @@ namespace Paradix
 			IsActive = false;
 		}
 
-		public virtual void Update (GameTime gameTime, InputManager input)
-		{
-			if (IsActive) 
-			{
-				foreach (var component in Components) 
-				{
-					if (component is IUpdateable)
-						((IUpdateable)component).Update (gameTime, input);
-				}
-			}
-		}
-
-		public virtual void Draw (GameTime gameTime, GraphicsManager graphics)
-		{
-			if (IsActive) 
-			{
-				foreach (var component in Components) 
-				{
-					if (component is IDrawable)
-						((IDrawable)component).Draw (gameTime, graphics);
-				}
-			}
-		}
-
 		public void AddComponent (Component component)
 		{
 			Contract.RequiresNotNull (component, "component must not be null");
-			Contract.Requires (component.AttachedGameObject == null, "componement must not have multiple parents");
+			Contract.Requires (component.AttachedEntity == null, "componement must not have multiple parents");
 
-			component.AttachedGameObject = this;
+			component.AttachedEntity = this;
 			Components.Add (component);
 		}
 
@@ -65,9 +41,9 @@ namespace Paradix
 
 			foreach (var component in Components) 
 			{
-				Contract.Requires (component.AttachedGameObject == null, "componements must not have multiple parents");
+				Contract.Requires (component.AttachedEntity == null, "componements must not have multiple parents");
 
-				component.AttachedGameObject = this;
+				component.AttachedEntity = this;
 			}
 
 			Components.AddRange (components);
@@ -165,6 +141,48 @@ namespace Paradix
 				component.Initialize ();
 		}
 
+		public virtual void Load (ContentManager content)
+		{
+			foreach (var component in Components) 
+			{
+				if (component is IContent)
+					((IContent)component).Load (content);
+			}
+		}
+
+		public virtual void Update (GameTime gameTime, InputManager input)
+		{
+			if (IsActive) 
+			{
+				foreach (var component in Components) 
+				{
+					if (component is IUpdateable)
+						((IUpdateable)component).Update (gameTime, input);
+				}
+			}
+		}
+
+		public virtual void Draw (GameTime gameTime, GraphicsManager graphics)
+		{
+			if (IsActive) 
+			{
+				foreach (var component in Components) 
+				{
+					if (component is IDrawable)
+						((IDrawable)component).Draw (gameTime, graphics);
+				}
+			}
+		}
+
+		public virtual void Destroy ()
+		{
+			foreach (var component in Components) 
+			{
+				if (component is IContent)
+					((IContent)component).Destroy ();
+			}
+		}
+
 		protected override void Dispose (bool disposing)
 		{
 			if (!IsDisposed && disposing) 
@@ -176,6 +194,7 @@ namespace Paradix
 
 			base.Dispose (disposing);
 		}
+
 	}
 }
 

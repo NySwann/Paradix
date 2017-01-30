@@ -17,6 +17,7 @@ namespace Paradix.Sample
 			AddComponent (new Transform());
 			AddComponent (new Renderer ());
 			AddComponent (new RigidBody());
+			AddComponent (new Asteroid());
 
 			GetComponent<Transform> ().AbsolutePosition = 
 				new Vector2 (shooter.Graphics.BufferWidth / 2, shooter.Graphics.BufferHeight / 2);
@@ -27,8 +28,10 @@ namespace Paradix.Sample
 			GetComponent<RigidBody> ().MaxVelocity = ShipMaxSpeed;
 		}
 
-		public void Load(ContentManager content)
+		public override void Load(ContentManager content)
 		{
+			base.Load (content);
+
 			GetComponent<Renderer> ().Sprite = new Sprite(content.Load<Texture2D> (ShipTextureFile));
 			GetComponent<Renderer> ().PixelsPerUnit = 1f;
 			GetComponent<Renderer> ().LayerDepth = 0.9f;
@@ -52,6 +55,10 @@ namespace Paradix.Sample
 				GetComponent<Transform> ().RelativeRotation += 0.01f;
 			if (input.Keyboards [0].IsKeyDown (Keys.E))
 				GetComponent<Transform> ().RelativeRotation -= 0.01f;
+			if (input.Keyboards [0].IsKeyDown (Keys.O))
+				GetComponent<Transform> ().RelativeScale += new Vector2 (0.01f, 0.01f);
+			if (input.Keyboards [0].IsKeyDown (Keys.P))
+				GetComponent<Transform> ().RelativeScale -= new Vector2 (0.01f, 0.01f);
 
 			GetComponent<RigidBody> ().AddVelocity (velocity);
 		}
