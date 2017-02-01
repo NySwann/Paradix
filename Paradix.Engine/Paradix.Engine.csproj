@@ -32,10 +32,6 @@
     <Compile Include="Assertions\Contract.cs" />
     <Compile Include="System\Component.cs" />
     <Compile Include="System\Entity.cs" />
-    <Compile Include="Behaviors\IDrawable.cs" />
-    <Compile Include="Behaviors\IUpdateable.cs" />
-    <Compile Include="Components\Transform.cs" />
-    <Compile Include="Components\Renderer.cs" />
     <Compile Include="Graphics\Sprite.cs" />
     <Compile Include="Graphics\SpriteSheet.cs" />
     <Compile Include="Input\GamePadController.cs" />
@@ -43,12 +39,24 @@
     <Compile Include="Input\MouseButton.cs" />
     <Compile Include="Input\MouseController.cs" />
     <Compile Include="ParadixGame.cs" />
-    <Compile Include="Managers\InputManager.cs" />
-    <Compile Include="Managers\GraphicsManager.cs" />
-    <Compile Include="Components\RigidBody.cs" />
     <Compile Include="Input\IController.cs" />
-    <Compile Include="Behaviors\IContent.cs" />
     <Compile Include="Utils\Vector2Extensions.cs" />
+    <Compile Include="Animations\Animation.cs" />
+    <Compile Include="Utils\RandomExtensions.cs" />
+    <Compile Include="Geometry\Curves.cs" />
+    <Compile Include="Geometry\Easing.cs" />
+    <Compile Include="Geometry\Shape.cs" />
+    <Compile Include="System\Managers\GraphicsManager.cs" />
+    <Compile Include="System\Managers\InputManager.cs" />
+    <Compile Include="System\Behaviors\IContent.cs" />
+    <Compile Include="System\Behaviors\IDrawable.cs" />
+    <Compile Include="System\Behaviors\IUpdateable.cs" />
+    <Compile Include="System\Components\Animator.cs" />
+    <Compile Include="System\Components\Renderer.cs" />
+    <Compile Include="System\Components\RigidBody.cs" />
+    <Compile Include="System\Components\Transform.cs" />
+    <Compile Include="Utils\RectangleExtensions.cs" />
+    <Compile Include="Geometry\Shapes\RectangleF.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -58,13 +66,15 @@
   <ItemGroup>
     <Folder Include="System\" />
     <Folder Include="Assertions\" />
-    <Folder Include="Behaviors\" />
-    <Folder Include="Components\" />
     <Folder Include="Graphics\" />
     <Folder Include="Input\" />
-    <Folder Include="Managers\" />
     <Folder Include="Utils\" />
     <Folder Include="Geometry\" />
+    <Folder Include="Animations\" />
+    <Folder Include="System\Managers\" />
+    <Folder Include="System\Behaviors\" />
+    <Folder Include="System\Components\" />
+    <Folder Include="Geometry\Shapes\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

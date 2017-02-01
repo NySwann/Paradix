@@ -1,10 +1,18 @@
 ﻿<Properties StartupConfiguration="{BFB66FFB-1935-48AF-8A60-CAC1EF792220}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Paradix.Farseer/Collision/Collision.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Paradix.Engine/Geometry/Shapes/RectangleF.cs">
     <Files>
       <File FileName="Paradix.Farseer/Collision/Collision.cs" Line="29" Column="17" />
       <File FileName="Paradix.Farseer/Common/PolygonManipulation/YuPengClipper.cs" Line="63" Column="90" />
       <File FileName="Paradix.Farseer/Settings.cs" Line="5" Column="24" />
       <File FileName="Paradix.Farseer/DebugViewBase.cs" Line="14" Column="21" />
+      <File FileName="Paradix.Engine/Utils/Vector2Extensions.cs" Line="30" Column="51" />
+      <File FileName="Paradix.Engine/Animations/Animation.cs" Line="20" Column="4" />
+      <File FileName="Paradix.Engine/Utils/RectangleExtensions.cs" Line="39" Column="10" />
+      <File FileName="Paradix.Engine/Utils/RandomExtensions.cs" Line="1" Column="1" />
+      <File FileName="Paradix.Engine/Geometry/Curves.cs" Line="5" Column="28" />
+      <File FileName="Paradix.Engine/Geometry/Easing.cs" Line="1" Column="1" />
+      <File FileName="Paradix.Engine/Geometry/Shape.cs" Line="9" Column="28" />
+      <File FileName="Paradix.Engine/Geometry/Shapes/RectangleF.cs" Line="14" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

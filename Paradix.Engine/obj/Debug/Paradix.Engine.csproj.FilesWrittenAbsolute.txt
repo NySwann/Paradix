@@ -1,0 +1,7 @@
+/home/swann/Projets/Paradix/Paradix.Engine/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile111.AssemblyAttribute.cs
+/home/swann/Projets/Paradix/Paradix.Engine/bin/Debug/MonoGame.Framework.dll
+/home/swann/Projets/Paradix/Paradix.Engine/bin/Debug/OpenTK.dll
+/home/swann/Projets/Paradix/Paradix.Engine/bin/Debug/Paradix.Engine.dll.mdb
+/home/swann/Projets/Paradix/Paradix.Engine/bin/Debug/Paradix.Engine.dll
+/home/swann/Projets/Paradix/Paradix.Engine/obj/Debug/Paradix.Engine.dll
+/home/swann/Projets/Paradix/Paradix.Engine/obj/Debug/Paradix.Engine.dll.mdb

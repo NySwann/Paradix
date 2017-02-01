@@ -1,0 +1,7 @@
+/home/swann/Projets/Paradix/Paradix.Farseer/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile111.AssemblyAttribute.cs
+/home/swann/Projets/Paradix/Paradix.Farseer/bin/Debug/Paradix.Farseer.dll.mdb
+/home/swann/Projets/Paradix/Paradix.Farseer/bin/Debug/Paradix.Farseer.dll
+/home/swann/Projets/Paradix/Paradix.Farseer/obj/Debug/Paradix.Farseer.dll
+/home/swann/Projets/Paradix/Paradix.Farseer/obj/Debug/Paradix.Farseer.dll.mdb
+/home/swann/Projets/Paradix/Paradix.Farseer/bin/Debug/MonoGame.Framework.dll
+/home/swann/Projets/Paradix/Paradix.Farseer/bin/Debug/OpenTK.dll
