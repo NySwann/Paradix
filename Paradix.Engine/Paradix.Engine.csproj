@@ -45,7 +45,7 @@
     <Compile Include="Utils\RandomExtensions.cs" />
     <Compile Include="Geometry\Curves.cs" />
     <Compile Include="Geometry\Easing.cs" />
-    <Compile Include="Geometry\Shape.cs" />
+    <Compile Include="Geometry\IShapeF.cs" />
     <Compile Include="System\Managers\GraphicsManager.cs" />
     <Compile Include="System\Managers\InputManager.cs" />
     <Compile Include="System\Behaviors\IContent.cs" />
@@ -57,6 +57,15 @@
     <Compile Include="System\Components\Transform.cs" />
     <Compile Include="Utils\RectangleExtensions.cs" />
     <Compile Include="Geometry\Shapes\RectangleF.cs" />
+    <Compile Include="Time\Clock.cs" />
+    <Compile Include="Time\Countdown.cs" />
+    <Compile Include="Time\Timer.cs" />
+    <Compile Include="Time\TimerState.cs" />
+    <Compile Include="Utils\SpriteBatchExtensions.cs" />
+    <Compile Include="Geometry\Shapes\CircleF.cs" />
+    <Compile Include="Geometry\Shapes\PolygonF.cs" />
+    <Compile Include="Geometry\Shapes\PolylineF.cs" />
+    <Compile Include="Geometry\Shapes\EllipseF.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -75,6 +84,8 @@
     <Folder Include="System\Behaviors\" />
     <Folder Include="System\Components\" />
     <Folder Include="Geometry\Shapes\" />
+    <Folder Include="Time\" />
+    <Folder Include="Scenes\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

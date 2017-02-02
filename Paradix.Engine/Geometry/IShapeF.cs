@@ -2,7 +2,7 @@
 
 namespace Paradix
 {
-	public interface IShape
+	public interface IShapeF
 	{
 		RectangleF BoundingRectangle { get; }
 		bool Contains (Vector2 point);
