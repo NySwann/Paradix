@@ -66,6 +66,8 @@
     <Compile Include="Geometry\Shapes\PolygonF.cs" />
     <Compile Include="Geometry\Shapes\PolylineF.cs" />
     <Compile Include="Geometry\Shapes\EllipseF.cs" />
+    <Compile Include="Scenes\SceneManager.cs" />
+    <Compile Include="Scenes\Scene.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -85,6 +87,7 @@
     <Folder Include="System\Components\" />
     <Folder Include="Geometry\Shapes\" />
     <Folder Include="Time\" />
+    <Folder Include="Scenes\" />
     <Folder Include="Scenes\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
